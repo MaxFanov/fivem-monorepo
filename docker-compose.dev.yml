@@ -1,0 +1,21 @@
+services:
+  fxserver:
+    image: spritsail/fivem:latest
+    container_name: fivem_wsl_runtime
+    environment:
+      - TERM=xterm-256color
+      - NO_DEFAULT_CONFIG=1
+    volumes:
+      - ./fxserver/server.cfg:/config/server.cfg
+      - ./packages:/config/resources/[core]
+      - tx_data_isolated:/txData
+    ports:
+      - "30120:30120/tcp"
+      - "30120:30120/udp"
+      - "40120:40120/tcp"
+    stdin_open: true
+    tty: true
+    restart: on-failure
+
+volumes:
+  tx_data_isolated:

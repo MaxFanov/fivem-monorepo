@@ -1,0 +1,28 @@
+# Monorepo & Tooling Caches
+.turbo/
+node_modules/
+.bun/
+bun.lockb
+
+# Compilation Outputs (Generated Code)
+packages/\*/dist/
+# packages/database/src/generated.ts
+
+# Docker & Runtime State
+fxserver/logs/
+fxserver/server.cfg
+!fxserver/server.example.cfg
+pgdata/
+redisdata/
+txData/
+
+# Environment & Secrets
+.env
+.env.local
+.env.development
+.env.production
+
+# Ignore custom server configs if they hardcode your live keys
+# Better yet: keep a server.example.cfg tracked, and ignore the real one
+# fxserver/server.cfg
+ 

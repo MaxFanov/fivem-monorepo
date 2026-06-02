@@ -1,0 +1,12 @@
+{
+	"name": "@flow/bundler",
+	"version": "1.0.0",
+	"type": "module",
+	"main": "./src/compile.ts",
+	"bin": {
+		"flowbuild": "./bin.ts"
+	},
+	"dependencies": {
+		"bun": "latest"
+	}
+}

@@ -1,0 +1,19 @@
+{
+	"name": "flow",
+	"private": true,
+	"type": "module",
+	"workspaces": [
+		"packages/*"
+	],
+  "packageManager": "bun@1.3.0",
+	"scripts": {
+		"build": "turbo run build",
+		"watch": "turbo run watch"
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"@types/bun": "^1.3.14",
+		"turbo": "^2.9.16",
+		"typescript": "^6.0.3"
+	}
+}
